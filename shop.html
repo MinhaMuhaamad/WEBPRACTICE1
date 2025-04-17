@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charmant Jewelry Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Styles for the newest items section */
+        .newest-items {
+            padding: 40px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            min-height: 100vh;
+        }
+        .heading {
+            font-size: 3.5rem; /* Larger font size for more impact */
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+            letter-spacing: 4px; /* Increased letter spacing for elegance */
+            opacity: 0;
+            transition: opacity 1s ease-in;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            position: relative;
+        }
+
+        .heading::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: #d4a373; /* Gold underline for luxury */
+            opacity: 0;
+            transition: opacity 0.5s ease-in 1s; /* Delayed appearance */
+        }
+
+        .heading.visible {
+            opacity: 1;
+        }
+
+        .heading.visible::after {
+            opacity: 1;
+        }
+
+        .items-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .item {
+            flex: 1;
+            min-width: 220px;
+            max-width: 220px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #d4a373;
+            margin-bottom: 5px;
+            text-decoration: none;
+        }
+
+        .title {
+            font-size: 1rem;
+            color: #5d6d7e;
+            font-family: 'Raleway', sans-serif;
+            text-decoration: none;
+        }
+
+        .item-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .item-link:hover .item {
+            transform: translateY(-8px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px) scale(0.8); /* Added translateY for a subtle bounce effect */
+            transition: transform 0.5s ease-in-out, opacity 0.7s ease-in-out;
+        }
+
+        /* Media query adjustments */
+        @media (max-width: 768px) {
+            .row {
+                gap: 15px;
+            }
+
+            .item {
+                min-width: 180px;
+                max-width: 200px;
+                padding: 15px;
+            }
+
+            .heading {
+                font-size: 2.5rem; /* Adjusted for mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="newest-items">
+        <h1 class="heading">SHOP ALL ITEMS</h1>
+        <div class="items-container">
+            <!-- First Row -->
+            <div class="row">
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="V17XXaUqYp58Mw2vxBOHMSDsC8U.avif" alt="Delicate Knot Bracelet">
+                        <p class="price">$500</p>
+                        <p class="title">Delicate Knot Bracelet</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="1APxLSz9uhB91ocicXkKSA1tXw.avif" alt="Vintage Locket Necklace">
+                        <p class="price">$1.3K</p>
+                        <p class="title">Vintage Locket Necklace</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="47Hv87Jvbbi9gMDa7hfOeThUeK4.avif" alt="Double Pendant Necklace">
+                        <p class="price">$1.1K</p>
+                        <p class="title">Double Pendant Necklace</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="KjAdHtrFfV8Yo5A1Sq4J1ZBrc0.avif" alt="Charm Link Bracelet">
+                        <p class="price">$1.1K</p>
+                        <p class="title">Charm Link Bracelet</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Second Row -->
+            <div class="row">
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="1mLdqjRJLbVthTTpW022MvJxFI.avif" alt="Silver Chain Necklace">
+                        <p class="price">$900</p>
+                        <p class="title">Silver Chain Necklace</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="3NSbBNJLeB3DQx0rOmddiXJwU.avif" alt="Rose Gold Ring">
+                        <p class="price">$750</p>
+                        <p class="title">Rose Gold Ring</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="1mLdqjRJLbVthTTpW022MvJxFI.avif" alt="Elegant Stud Earrings">
+                        <p class="price">$1.2K</p>
+                        <p class="title">Elegant Stud Earrings</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="RDVoBPvLRxLA5jWdCEAY7hTmrIU.avif" alt="Classic Pearl Necklace">
+                        <p class="price">$1.5K</p>
+                        <p class="title">Classic Pearl Necklace</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Third Row -->
+            <div class="row">
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="yfhtJQu7UCekCh4Ed337tPD90E.avif" alt="Sapphire Gem Bracelet">
+                        <p class="price">$2K</p>
+                        <p class="title">Sapphire Gem Bracelet</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="vSLqpzRSFX5wUT1jjnTDj2SZyI.avif" alt="Gold Hoop Earrings">
+                        <p class="price">$800</p>
+                        <p class="title">Gold Hoop Earrings</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="KjAdHtrFfV8Yo5A1Sq4J1ZBrc0.avif" alt="Designer Diamond Ring">
+                        <p class="price">$2.5K</p>
+                        <p class="title">Designer Diamond Ring</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="47Hv87Jvbbi9gMDa7hfOeThUeK4.avif" alt="Minimalist Chain Bracelet">
+                        <p class="price">$600</p>
+                        <p class="title">Minimalist Chain Bracelet</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const heading = document.querySelector('.heading');
+            const text = heading.textContent;
+            heading.textContent = '';
+
+            text.split('').forEach((char, index) => {
+                const span = document.createElement('span');
+                span.textContent = char;
+                span.classList.add('letter');
+                heading.appendChild(span);
+                span.style.transitionDelay = `${index * 0.08}s`; /* Slightly faster for smoother effect */
+            });
+
+            setTimeout(() => {
+                heading.classList.add('visible'); /* Use class to trigger visibility */
+                const letters = document.querySelectorAll('.letter');
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.style.opacity = '1';
+                        letter.style.transform = 'translateY(0) scale(1)'; /* Smooth bounce effect */
+                    }, index * 80); /* Adjusted timing for smoother animation */
+                });
+            }, 300); /* Slightly faster initial delay */
+        });
+    </script>
+</body>
+</html>
